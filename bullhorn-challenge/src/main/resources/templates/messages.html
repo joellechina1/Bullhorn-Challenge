@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to the messaging platform!</title>
+</head>
+    <body>
+        <h1>All Messages</h1>
+        <div>
+            <table>
+                <thead>
+                <tr>
+                    <th>Message</th>
+                    <th>Sent By</th>
+                    <th>Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="message : ${messages}">
+                    <td th:text="${message.content}"></td>
+                    <td th:text="${message.sentby}"></td>
+                    <td th:text="${message.posteddate}"></td>
+                </tr>
+                </tbody>
+            </table>
+            <p><a href="/add">Add a new message</a></p>
+        </div>
+    </body>
+</html>

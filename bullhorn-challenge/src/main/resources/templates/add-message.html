@@ -1,0 +1,9 @@
+<form action="#" th:action="@{/addmessage}" th:object="${message}" method="post">
+    <label for="message">Message</label>
+    <input type="text" th:field="*{content}" id="message" placeholder="Message">
+
+    <label for="sentby">Name</label>
+    <input type="text" th:field="*{sentby}" id="sentby" placeholder="Your Name">
+
+    <input type="submit" value="Add Message">
+</form>
